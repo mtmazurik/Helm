@@ -1,7 +1,7 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod 
 metadata:
-  name: {{ include "alpine.fullname" . }}
+  name: {{ template "alpine.fullname" . }}
   labels:
 {{ include "alpine.labels" . | indent 4 }}
 spec:
