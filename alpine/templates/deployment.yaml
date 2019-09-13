@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/version: 1.0.0
-    helm.sh/chart: {{ .Chart.name }}
+    helm.sh/chart: {{ .Chart.Name }}
     app.kubernetes.io/name: {{ template "alpine.name" .}}
   spec:
     restartpolicy: {{ .Values.restartPolicy }}
