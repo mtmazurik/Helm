@@ -4,7 +4,7 @@
 
 createPod.yaml was a reverse-engineering to deploy (directly) with the command:
 
-*[Code] $ kubectl create -f createPod.yaml    
+[Code] $ kubectl create -f createPod.yaml    
 
 the above command, not Helm related at all, but direct interaction with K8S.
 
