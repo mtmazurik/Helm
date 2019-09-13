@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: {{ template "alpine.fullname" . }}
   labels:
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/version: 1.0.0
     helm.sh/chart: {{ .Chart.name }}
     app.kubernetes.io/name: {{ template "alpine.name" .}}
