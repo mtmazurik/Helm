@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: quarrelsome-lion-alpine
+spec:
+  restartPolicy: Never
+  containers:
+    - name: donothing 
+      image: "alpine:latest"
+      imagePullPolicy: IfNotPresent
+      command: ["/bin/sleep", "9000"]
