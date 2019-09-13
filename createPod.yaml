@@ -9,3 +9,7 @@ spec:
       image: "alpine:latest"
       imagePullPolicy: IfNotPresent
       command: ["/bin/sleep", "9000"]
+#
+# this is a pared down list to install alpine (directly)
+# with $  kubectl create -f createPod.yaml   so I can reverse engineer the core HELM needed statements
+# for a simplified deployment.yaml that is part of a Chart

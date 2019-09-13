@@ -1,17 +1,17 @@
-apiversio.image.pullPolicy }}: v1
-kind: pod 
+apiVersion: v1
+kind: Pod 
 metadata:
   name: {{ template "alpine.fullname" . }}
   labels:
     app.kubernetes.io/managed-by: {{ .Release.service }}
     app.kubernetes.io/instance: {{ .Release.name }}
-    app.kubernetes.io/version: {{ .Chart.AppVersion }}
-    helm.sh/chart: {{ .Chart.Name }}
+    app.kubernetes.io/version: {{ .Chart.appVersion }}
+    helm.sh/chart: {{ .Chart.name }}
     app.kubernetes.io/name: {{ template "alpine.name" .}}
   spec:
     restartpolicy: {{ .Values.restartPolicy }}
     containers:
-      - name: alpinelodge
+      - name: donothing
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagepullpolicy: {{ .Values.image.pullPolicy }}
         command: ["/bin/sleep", "9000"]
