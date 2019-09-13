@@ -1,7 +1,7 @@
-apiVersion: v1
-appVersion: "1.0"
-description: Deploy a basic Alpine Linux pod
-home: https://github.com/mtmazurik/Helm/alpine
 name: alpine
+description: Deploy a basic Alpine Linux pod
+home: https://github.com/helm/helm
 version: 0.1.0
 icon: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
+sources:
+  - https://github.com/helm/helm
