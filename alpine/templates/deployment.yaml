@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: {{ template "alpine.fullname" . }}
   labels:
-    app.kubernetes.io/version: {{ .Chart.appVersion }}
+    app.kubernetes.io/version: 1.0.0
     helm.sh/chart: {{ .Chart.name }}
     app.kubernetes.io/name: {{ template "alpine.name" .}}
   spec:
