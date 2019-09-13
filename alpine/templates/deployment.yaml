@@ -9,7 +9,7 @@ metadata:
     helm.sh/chart: {{ .Chart.Name }}
     app.kubernetes.io/name: {{ template "alpine.name" .}}
   spec:
-    restartpolicy: {{ .Values.restartPolicy }}
+    restartPolicy: {{ .Values.restartPolicy }}
     containers:
       - name: donothing
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
